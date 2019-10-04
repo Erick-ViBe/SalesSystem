@@ -16,7 +16,7 @@ Descripción:
 
 Fecha de Entrega: 
 
-- En proceso asies asies
+- En proceso
 
 Estructuras a usar:
 
