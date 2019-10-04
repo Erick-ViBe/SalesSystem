@@ -16,11 +16,9 @@ Descripción:
 
 Fecha de Entrega: 
 
-<<<<<<< HEAD
 - En proceso asies asies
 
-=======
-- En proceso
-
 Estructuras a usar:
+
+- No se sabe todavia
 
