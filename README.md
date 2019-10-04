@@ -16,7 +16,6 @@ Descripción:
 
 Fecha de Entrega: 
 
-<<<<<<< HEAD
 - En proceso asies asies
 
 =======
