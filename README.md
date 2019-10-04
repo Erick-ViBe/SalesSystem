@@ -2,7 +2,6 @@
 
 Grupo: 1CV10
 
-Integrantes:
 
 - Castañeda Martínez Erick
 - Vicencio Benítez Sergio Erick
@@ -17,5 +16,11 @@ Descripción:
 
 Fecha de Entrega: 
 
+<<<<<<< HEAD
 - En proceso asies asies
+
+=======
+- En proceso
+
+Estructuras a usar:
 
