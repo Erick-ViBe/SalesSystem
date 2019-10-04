@@ -18,8 +18,7 @@ Fecha de Entrega:
 
 - En proceso asies asies
 
-=======
-- En proceso
-
 Estructuras a usar:
+
+- No se sabe todavia
 
