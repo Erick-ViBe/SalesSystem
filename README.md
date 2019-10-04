@@ -15,4 +15,4 @@ Descripción:
 
 - En proceso
 
-Fecha de Entrega: No se sabe!!!
+Fecha de Entrega: No se sabe, bro!!!
