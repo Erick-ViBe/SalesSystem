@@ -8,17 +8,16 @@ Grupo: 1CV10
 
 Nombre del Proyecto:
 
-- En proceso
+
 
 Descripción:
 
-- En proceso
+
 
 Fecha de Entrega: 
 
-- En proceso asies asies
+
 
 Estructuras a usar:
 
-- No se sabe todavia
 
