@@ -2,8 +2,9 @@
 
 Integrantes:
 
-- Castañeda Martínez Erick
-- Vicencio Benítez Sergio Erick
+Grupo - 1CV10
+- Castañeda Martínez Erick 2019
+- Vicencio Benítez Sergio Erick 2020
 
 Nombre del Proyecto:
 
