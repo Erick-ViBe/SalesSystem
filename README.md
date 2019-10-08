@@ -8,16 +8,16 @@ Grupo: 1CV10
 
 Nombre del Proyecto:
 
-- No definidos
+- No definido
 
 Descripción:
 
-- No definidos
+- No definido
 
 Fecha de Entrega:
 
-- No definidos
+- No definido
 
 Estructuras a usar:
 
-- No definidos
+- No definido
