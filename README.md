@@ -8,11 +8,11 @@ Grupo: 1CV10
 
 Nombre del Proyecto:
 
--Maincra
+- Camino Más Corto
 
 Descripción:
 
-- No definido
+- Este programa recibe un grafo e imprime el camino más corto de un punto a otro
 
 Fecha de Entrega:
 
