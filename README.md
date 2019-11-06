@@ -8,11 +8,11 @@ Grupo: 1CV10
 
 Nombre del Proyecto:
 
-- Camino Más Corto
+- Generador de tickets de productos
 
 Descripción:
 
-- Este programa recibe un grafo e imprime el camino más corto de un punto a otro
+- Este programa recibe datos acerca de una transacción y devuelve un ticket de compra
 
 Fecha de Entrega:
 
@@ -20,4 +20,5 @@ Fecha de Entrega:
 
 Estructuras a usar:
 
-- No definido
+- Listas Ligadas
+- Árboles Binarios
