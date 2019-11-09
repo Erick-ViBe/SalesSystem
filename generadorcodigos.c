@@ -4,7 +4,7 @@
 
 int main(int argc, char const *argv[]) {
 
-  char palabra[] = "agua embotellada 123";
+  char palabra[] = "ATUN TUNY";
   char cifrada[strlen(palabra)];
 
   printf("%s\n", palabra);
@@ -15,6 +15,9 @@ int main(int argc, char const *argv[]) {
         palabra[i] = tolower(palabra[i]);
       }
   }
+
+  printf("%s\n", palabra);
+
 
   // insertar el ascii de cada elemento de la cadena
   for(int i = 0; i < strlen(palabra); ++i){
