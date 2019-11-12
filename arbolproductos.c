@@ -28,7 +28,7 @@ struct Producto buscar(int codigo_a_buscar, struct Nodo *raiz_arbol_productos) {
 
    } else {
       return codigo_a_buscar(codigo_a_buscar, raiz_arbol_productos->hijo_derecho);
-      
+
    }
 }
 
@@ -37,7 +37,13 @@ struct Nodo* crearNodo(struct Producto datosNodo){
 }
 
 //No terminado
-void insertar(struct Producto producto_a_insertar, struct Nodo *raiz_arbol_productos) {
+void insertar(struct Producto producto_a_insertar, struct Nodo **raiz_arbol_productos) {
+
+  if(*raiz_arbol_productos == NULL){
+      raiz_arbol_productos = malloc(sizeof(struct nodo));
+  }
+
+  struct nodo *nodotemporal = malloc(sizeof(struct nodo));
 
    struct Nodo* nodoCreado;
    *nodoCreado = crearNodo(producto_a_insertar);
