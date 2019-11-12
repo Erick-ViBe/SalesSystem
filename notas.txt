@@ -6,6 +6,7 @@ subarbol izquierdo tiene una FE de -1
 nodoizquierdo = su nodoizquierdo queda igual y el
 nododerecho es igual a la raiz
 raiz = nodoizquierdo
+Queda en izquierdo
 
 Rotacion Simple Izquierda: La raiz tiene un FE de 2 y el
 subarbol derecho tiene una FE de 1
