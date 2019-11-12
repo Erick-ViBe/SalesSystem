@@ -55,12 +55,12 @@ void insertar(struct Producto producto_a_insertar, struct Nodo *raiz_arbol_produ
 
       return codigo_a_buscar(codigo_a_buscar, raiz_arbol_productos->hijo_derecho);
    }
-
 }
 
 void rotacionDerecha(struct Nodo* raizDesbalanceada){
-   raiz->hijo_izquierdo->hijo_derecho = raiz;
-   raiz->hijo_izquierdo->hijo_derecho = null;
-   raiz = hijo_izquierdo;
 
+   raizDesbalanceada -> hijo_izquierdo->hijo_derecho = raiz;
+   raizDesbalanceada = raizDesbalanceada->hijo_izquierdo;
+   raizDesbalanceada->hijo_derecho->hijo_izquierdo = null;
+   raizDesbalanceada->hijo_derecho->hijo_derecho = null;
 }
