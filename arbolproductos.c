@@ -12,7 +12,7 @@ struct Nodo {
 
    struct Producto producto_almacenado;
    struct Nodo *hijo_derecho;
-   struct Nodo *hijo_izquierdo;Quedo implementada la funcion de buscar producto, sin haber hecho prueba
+   struct Nodo *hijo_izquierdo;
 };
 
 struct Producto buscar(int codigo_a_buscar, struct Nodo *raiz_arbol_productos) {
