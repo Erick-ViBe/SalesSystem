@@ -13,6 +13,7 @@ struct Nodo {
    struct Producto producto_almacenado;
    struct Nodo *hijo_derecho;
    struct Nodo *hijo_izquierdo;
+   int fe;
 };
 
 struct Producto buscar(int codigo_a_buscar, struct Nodo *raiz_arbol_productos) {
@@ -54,4 +55,6 @@ void insertar(struct Producto producto_a_insertar, struct Nodo *raiz_arbol_produ
 
       return codigo_a_buscar(codigo_a_buscar, raiz_arbol_productos->hijo_derecho);
    }
+
+
 }
