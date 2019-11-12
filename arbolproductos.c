@@ -49,7 +49,7 @@ void insertar(struct Producto producto_a_insertar, struct Nodo **raiz_arbol_prod
    *nodoCreado = crearNodo(producto_a_insertar);
 
    struct Nodo* auxiliar;
-
+//cdcdc
    if (raiz_arbol_productos == null) {
 
       return null;
