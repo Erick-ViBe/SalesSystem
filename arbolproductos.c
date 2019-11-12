@@ -22,7 +22,7 @@ struct Producto buscar(int codigo_a_buscar, struct Nodo raiz_arbol_productos) {
       return null;
    } else if (raiz_arbol_productos.producto_almacenado.codigo == codigo_a_buscar) {
 
-      return raiz_arbol_productos;
+      return raiz_arbol_productos.producto_almacenado;
    } else if (codigo_a_buscar < raiz_arbol_productos.producto_almacenado.codigo) {
 
       return buscar(codigo_a_buscar, raiz_arbol_productos.hijo_izquierdo);
