@@ -13,6 +13,7 @@ subarbol derecho tiene una FE de 1
 nododerecho = su nododerecho queda igual y el
 nodoizquierdo es igual a la raiz
 raiz = nododerecho
+Queda derecho
 
 Rotacion Doble a la Derecha: La raiz tiene un FE > +1 y el
 subarbol derecho tiene signo distinto ( - negativo )
