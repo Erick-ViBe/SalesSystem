@@ -30,10 +30,6 @@ struct Producto buscar(int codigo_a_buscar, struct Nodo *raiz_arbol_productos) {
    } else {
 
       return codigo_a_buscar(codigo_a_buscar, raiz_arbol_productos->hijo_derecho);
-<<<<<<< HEAD
-
-=======
->>>>>>> 703aac295b4d42fe565e409c4d65150837ee3f80
    }
 }
 
@@ -67,10 +63,14 @@ void insertar(struct Producto producto_a_insertar, struct Nodo **raiz_arbol_prod
    }
 }
 
-void rotacionDerecha(struct Nodo* raizDesbalanceada){
+void rotacionDerecha(struct Nodo **raizDesbalanceada){
 
-   raizDesbalanceada -> hijo_izquierdo->hijo_derecho = raiz;
-   raizDesbalanceada = raizDesbalanceada->hijo_izquierdo;
-   raizDesbalanceada->hijo_derecho->hijo_izquierdo = null;
-   raizDesbalanceada->hijo_derecho->hijo_derecho = null;
+   struct Nodo* aux;
+   struct Nodo* aux2;
+
+   aux = *raizDesbalanceada;
+   *raizDesbalanceada = *raizDesbalanceada->hijo_izquierdo;
+   aux2 = *raizDesbalanceada->hijo_derecho;
+   *raizDesbalanceada->hijo_derecho = aux;
+   *raizDesbalanceada->hijo_derecho = aux2;
 }
