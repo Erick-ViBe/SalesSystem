@@ -2,7 +2,6 @@
 
 Grupo: 1CV10
 
-
 - Castañeda Martínez Erick
 - Vicencio Benítez Sergio Erick
 
@@ -12,7 +11,7 @@ Nombre del Proyecto:
 
 Descripción:
 
-- Este programa recibe datos acerca de una transacción y devuelve un ticket de compra
+- Este programa recibe los datos personales de un cliente, una lista de items comprados. y devuelve un ticket de compra
 
 Fecha de Entrega:
 
@@ -20,5 +19,5 @@ Fecha de Entrega:
 
 Estructuras a usar:
 
-- Listas Ligadas
-- Árboles Binarios
+- Lista ligada simple
+- Árbol AVL
