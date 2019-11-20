@@ -33,26 +33,31 @@ int main(int argc, char const *argv[]) {
 
 
   // Convertir la segunda parte de entero a caracter
-  int valor = 0;
-  char comocaracter;
+  int valor;
+  char convertido;
 
-  for(int i = 0; i < 8; i++){
+  int i = 0;
+  for(i = 0; i < strlen(palabra) && i < 8; i++){
 
     valor = palabra[i] % 9;
-    comocaracter = enteroacaracter(valor);
-    parte2[i] = comocaracter;
+    if(valor == 0){
+      valor = 9;
+    }
+    convertido = enteroacaracter(valor);
+    parte2[i] = convertido;
 
     printf("%d %c\n", valor, parte2[i]);
 
   }
 
+  parte2[i] = '\0';
 
   printf("El entero acumulado es: %d\n", acumulado);
   printf("La cadena del entero acumulado es: %s\n", parte1);
-  printf("El entero de la segunda parte es: %s\n", parte2);
+  printf("La cadena de la segunda parte es: %s\n", parte2);
 
   //strcat(cadenacestino,cadenaorigen)
-  strcat(parte1,parte2);
+  strcat(parte1, parte2);
 
   printf("La cadena resultante es %s\n", parte1);
 
