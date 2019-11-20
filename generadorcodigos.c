@@ -3,13 +3,16 @@
 #include "ctype.h"
 #include "stdlib.h"
 
+char enteroacaracter(int numero);
+
 int main(int argc, char const *argv[]) {
 
-  char palabra[30];
+  int acumulado = 0;
+  char palabra[30], parte2[8];
   char codigo_producto[strlen(palabra)];
 
-  scanf("%[^\n]",palabra);s
-  printf("%s\n", palabra);
+  scanf("%[^\n]",palabra);
+  printf("La palabra ingresada es: %s\n", palabra);
 
   //convertir cadena a minúsculas
   for(int i = 0; i < strlen(palabra); ++i){
@@ -18,22 +21,44 @@ int main(int argc, char const *argv[]) {
       }
   }
 
-  // insertar el ascii de cada elemento de la cadena
+  // Obtener el mod9 de la suma de los ascii
   for(int i = 0; i < strlen(palabra); ++i){
-    codigo_producto[i] = (char)palabra[i]%9;
-    if((char)palabra[i]%9 == 0){
-      codigo_producto[i] = 9;
-    }
+    acumulado += palabra[i];
   }
 
-  for(int i = 0; i < strlen(palabra); ++i){
-    printf("%d", codigo_producto[i]);
+  // Convertir la primera parte de entero a caracter
+  	char *parte1 = malloc(4 * sizeof(char));
+  	sprintf(parte1, "%d", acumulado);
+          free(parte1);
+
+
+  // Convertir la segunda parte de entero a caracter
+  int valor = 0;
+  char comocaracter;
+
+  for(int i = 0; i < 8; i++){
+
+    valor = palabra[i] % 9;
+    comocaracter = enteroacaracter(valor);
+    parte2[i] = comocaracter;
+
+    printf("%d %c\n", valor, parte2[i]);
+
   }
 
-  double num = atoi(codigo_producto);
 
-  printf("\nEl valor numerico es: %f\n", num);
+  printf("El entero acumulado es: %d\n", acumulado);
+  printf("La cadena del entero acumulado es: %s\n", parte1);
+  printf("El entero de la segunda parte es: %s\n", parte2);
 
+  //strcat(cadenacestino,cadenaorigen)
+  strcat(parte1,parte2);
+
+  printf("La cadena resultante es %s\n", parte1);
 
   return 0;
+}
+
+char enteroacaracter(int numero){
+  return numero + '0';
 }
