@@ -8,7 +8,7 @@ int main(int argc, char const *argv[]) {
   char palabra[30];
   char codigo_producto[strlen(palabra)];
 
-  scanf("%[^\n]",palabra);s
+  scanf("%[^\n]",palabra);
   printf("%s\n", palabra);
 
   //convertir cadena a minúsculas
