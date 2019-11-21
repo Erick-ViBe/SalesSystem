@@ -37,7 +37,7 @@ int main(int argc, char const *argv[]) {
   char convertido;
 
   int i = 0;
-  for(i = 0; i < strlen(palabra) && i < 8; i++){
+  for(i = 0; i < strlen(palabra) && i < 6; i++){
 
     valor = palabra[i] % 9;
     if(valor == 0){
