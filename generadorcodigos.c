@@ -8,7 +8,7 @@ char enteroacaracter(int numero);
 int main(int argc, char const *argv[]) {
 
   int acumulado = 0;
-  char palabra[30], parte2[8];
+  char palabra[20], parte2[8];
   char codigo_producto[strlen(palabra)];
 
   scanf("%[^\n]",palabra);
