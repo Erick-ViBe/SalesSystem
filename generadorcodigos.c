@@ -9,7 +9,6 @@ int main(int argc, char const *argv[]) {
 
   int acumulado = 0;
   char palabra[20], parte2[8];
-  char codigo_producto[strlen(palabra)];
 
   scanf("%[^\n]",palabra);
   printf("La palabra ingresada es: %s\n", palabra);
@@ -29,7 +28,7 @@ int main(int argc, char const *argv[]) {
   // Convertir la primera parte de entero a caracter
   	char *parte1 = malloc(4 * sizeof(char));
   	sprintf(parte1, "%d", acumulado);
-          free(parte1);
+        //  free(parte1); //eliminsndo esta línea el error desaparece
 
 
   // Convertir la segunda parte de entero a caracter
