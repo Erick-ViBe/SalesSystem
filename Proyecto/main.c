@@ -6,5 +6,7 @@ int main(void) {
 
    raiz = insertar(raiz, leerProducto());
 
+   printf("Nombre %s\n", raiz->productoAlmacenado.nombre);
+
    return 0;
 }
