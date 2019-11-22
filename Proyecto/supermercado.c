@@ -15,7 +15,7 @@ leerProducto(void){
    nuevo.precio = precioProducto;
    strcpy(nuevo.nombre, nombreProducto);
    nuevo.codigo = obtenerCodigo(nombreProducto);
-   
+
    return nuevo;
 }
 
