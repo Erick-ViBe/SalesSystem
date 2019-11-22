@@ -7,8 +7,10 @@ leerProducto(void){
    float precioProducto;
    char nombreProducto[25];
 
-   scanf("Precio del Producto: %f", &precioProducto);
-   scanf("Nombre del Producto: %[^\n]",nombreProducto);
+   printf("Precio del Producto: \n");
+   scanf("%f", &precioProducto);
+   printf("Nombre del Producto: \n");
+   scanf("%s",nombreProducto);
 
    nuevo.precio = precioProducto;
    strcpy(nuevo.nombre, nombreProducto);
