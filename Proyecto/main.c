@@ -8,7 +8,7 @@ int main(void) {
 
    printf("Nombre: %s\n", raiz->productoAlmacenado.nombre);
    printf("Codigo: %d\n", raiz->productoAlmacenado.codigo);
-   printf("Precio %f\n", raiz->productoAlmacenado.precios);
+   printf("Precio %f\n", raiz->productoAlmacenado.precio);
 
    return 0;
 }
