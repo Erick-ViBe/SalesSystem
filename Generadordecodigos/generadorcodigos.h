@@ -5,6 +5,7 @@
 #include "string.h"
 #include "ctype.h"
 #include "stdlib.h"
+#include "math.h"
 
 char enteroacaracter(int numero);
 int obtenercodigo(char *palabra);

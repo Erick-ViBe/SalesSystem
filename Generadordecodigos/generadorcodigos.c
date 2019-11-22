@@ -6,7 +6,7 @@ char enteroacaracter(int numero){
 
 int obtenercodigo(char *palabra){
 
-  int acumulado = 0;
+  int acumulado = 0, num = 0;
   char parte2[8];
 
   //convertir cadena a minúsculas
@@ -32,7 +32,7 @@ int obtenercodigo(char *palabra){
   char convertido;
 
   int i = 0;
-  for(i = 0; i < strlen(palabra) && i < 6; i++){
+  for(i = 0; i < strlen(palabra) && i < 5; i++){
 
     valor = palabra[i] % 9;
     if(valor == 0){
@@ -49,8 +49,16 @@ int obtenercodigo(char *palabra){
 
   //strcat(cadenacestino,cadenaorigen)
   strcat(parte1, parte2);
+  num = atoi(parte1);
+  int multiplicador;
+  // printf("El codigo antes de agregar ceros es: %d\n", num);
+  // printf("El largo de cadena es: %lu\n", strlen(parte1) );
+  // printf("El restante es: %lu\n", (9 - strlen(parte1)) );
 
-  int num = atoi(parte1);
+  if(strlen(parte1) < 10)
+    multiplicador = pow(10, (9 - strlen(parte1)));
+    //printf("multiplicador = %d\n", multiplicador);
+    num *= multiplicador;
 
   return num;
 }
