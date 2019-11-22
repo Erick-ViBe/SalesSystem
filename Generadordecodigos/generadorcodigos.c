@@ -55,10 +55,12 @@ int obtenercodigo(char *palabra){
   // printf("El largo de cadena es: %lu\n", strlen(parte1) );
   // printf("El restante es: %lu\n", (9 - strlen(parte1)) );
 
-  if(strlen(parte1) < 10)
+  if(strlen(parte1) < 10){
     multiplicador = pow(10, (9 - strlen(parte1)));
-    //printf("multiplicador = %d\n", multiplicador);
     num *= multiplicador;
+  }
+    //printf("multiplicador = %d\n", multiplicador);
+
 
   return num;
 }
