@@ -29,6 +29,19 @@ struct Arbol {
    int fe;
 };
 
+struct Lista {
+
+   struct Producto productoComprado;
+   struct Lista *siguiente;
+};
+
+struct Ticket {
+
+   struct Cliente ClienteCompra;
+   struct Lista listaCompra;
+   float totalCompra;
+};
+
 struct Producto leerProducto();
 struct Cliente leerCliente();
 struct Arbol* insertar(struct Arbol *raizArbol, struct Producto productoInsertar);
@@ -40,5 +53,7 @@ struct Producto buscar(struct Arbol *raiz, int codigoBuscar);
 int modificar(struct Arbol *raiz, int codigoBuscar);
 char enteroacaracter(int numero);
 int obtenerCodigo(char *palabra);
+void listaInsertar(struct Lista **milista, struct Producto productoLista);
+struct Ticket finalizarCompra(struct Cliente clienteTicket, struct Arbol *raizArbol);
 
 #endif
