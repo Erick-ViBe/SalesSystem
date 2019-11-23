@@ -1,9 +1,8 @@
 #ifndef __SUPERMERCADO_H__
 #define __SUPERMERCADO_H__
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "stdio.h"
+#include "string.h"
 #include "ctype.h"
 #include "stdlib.h"
 #include "math.h"

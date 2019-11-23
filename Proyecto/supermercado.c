@@ -261,11 +261,9 @@ int obtenerCodigo(char *palabra){
   int multiplicador;
 
   if(strlen(parte1) < 10){
-
-     multiplicador = pow(10, (9 - strlen(parte1)));
-     num *= multiplicador;
- }
-
+    multiplicador = pow(10, (9 - strlen(parte1)));
+    num *= multiplicador;
+  }
   return num;
 }
 
