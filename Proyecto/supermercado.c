@@ -287,11 +287,10 @@ void listaInsertar(struct Lista **milista, struct Producto productoAgregado){
 struct Ticket finalizarCompra(struct Cliente clienteTicket, struct Arbol *raizArbol){
 
    struct Ticket nuevo;
-   nuevo->ClienteCompra = clienteTicket;
 
    struct Lista *compraTicket = NULL;
-
-   float totalCompraTicket;
+   struct Producto busqueda;
+   float totalCompraTicket = 0;
    int codigoCompraTicket;
    char comprarProducto;
 
@@ -300,9 +299,15 @@ struct Ticket finalizarCompra(struct Cliente clienteTicket, struct Arbol *raizAr
       printf("Ingrese el codigo del producto: ");
       scanf("%d\n", &codigoCompraTicket);
       listaInsertar(&compraTicket, buscar(raizArbol, codigoCompraTicket));
-
-      printf("Si desea agregar otro producto pulse 'S'\n", );
-      scanf("%c", comprarProducto);
+      busqueda = buscar(raizArbol, codigoCompraTicket);
+      totalCompraTicket += busqueda.precio;
+      printf("Si desea agregar otro producto pulse 'S'\n");
+      scanf("%c", &comprarProducto);
    } while(comprarProducto=='S' || comprarProducto=='s');
 
+   nuevo.ClienteCompra = clienteTicket;
+   nuevo.listaCompra = *compraTicket;
+   nuevo. totalCompra = totalCompraTicket;
+
+   return nuevo;
 }
