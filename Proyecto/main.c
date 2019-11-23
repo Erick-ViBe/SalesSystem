@@ -2,7 +2,7 @@
 
 int main(void) {
 
-   struct Arbol *raiz = NULL;
+   //struct Arbol *raiz = NULL;
 
    /*raiz = insertar(raiz, leerProducto());
    raiz = insertar(raiz, leerProducto());
@@ -21,63 +21,88 @@ int main(void) {
    printf("Precio %f\n", raiz->hijoIzquierdo->productoAlmacenado.precio);*/
 
 
-   int respuesta;
+   int selector;
+   char resp;
 
-   printf("MENU DE COMPRAS: \n");
-   printf("SELECCIONE LA OPCION: \n\n");
-   printf("OPCION 1: ADMINISTRADOR\n");
-   printf("OPCION 2: CAJERO\n");
-   printf("OPCION 3: SALIR\n");
+   do {
 
-   scanf("%d", &respuesta);
-   system("clear");
-
-   if(respuesta == 1){
-
-     printf("HA ENTRADO AL MENU ADMINISTRADOR\n");
+     printf("MENU DE COMPRAS: \n");
      printf("SELECCIONE LA OPCION: \n\n");
-     printf("OPCION 1: INGRESAR PRODUCTOS\n");
-     printf("OPCION 2: MODIFICAR UN PRODUCTO\n");
+     printf("OPCION 1: ADMINISTRADOR\n");
+     printf("OPCION 2: CAJERO\n");
      printf("OPCION 3: SALIR\n");
 
-     scanf("%d", &respuesta);
-     system("clear");
+     scanf("%d", &selector);
 
-     if(respuesta == 1){
+     if(selector == 1){
 
-       printf("HA SELECCIONADO INGRESAR UN NUEVO PRODUCTO\n");
+       printf("HA ENTRADO AL MENU ADMINISTRADOR\n");
+       printf("SELECCIONE LA OPCION: \n\n");
+       printf("OPCION 1: INGRESAR PRODUCTOS\n");
+       printf("OPCION 2: MODIFICAR UN PRODUCTO\n");
+       printf("OPCION 3: SALIR\n");
 
-     } else if(respuesta == 2) {
+       scanf("%d", &selector);
 
-       printf("HA SELECCIONADO MODIFICAR UN PRODUCTO\n");
+       if(selector == 1){
+
+         printf("HA SELECCIONADO INGRESAR UN NUEVO PRODUCTO\n");
+
+       } else if(selector == 2) {
+
+         printf("HA SELECCIONADO MODIFICAR UN PRODUCTO\n");
+
+       } else if(selector == 3) {
+
+         printf("GRACIAR POR USAR ESTE PROGRAMA\n");
+         exit(EXIT_SUCCESS);
+
+       } else {
+
+         printf("LA OPCION INGRESADA NO EXISTE. \n");
+
+       }
+
+
+     } else if(selector == 2) {
+
+       printf("HA ENTRADO AL MENU CAJERO\n");
+       printf("SELECCIONE LA OPCION: \n\n");
+       printf("OPCION 1: REGISTRAR UNA NUEVA COMPRA\n");
+       printf("OPCION 2: SALIR\n");
+
+       if(selector == 1){
+
+         printf("HA SELECCIONADO REGISTRAR UNA NUEVA COMPRA\n");
+
+       } else if(selector == 2) {
+
+         printf("GRACIAR POR USAR ESTE PROGRAMA\n");
+         exit(EXIT_SUCCESS);
+
+       } else {
+
+         printf("LA OPCION INGRESADA NO EXISTE. \n");
+
+       }
+
+     } else if(selector == 3) {
+
+       printf("GRACIAR POR USAR ESTE PROGRAMA\n");
+       exit(EXIT_SUCCESS);
 
      } else {
 
        printf("LA OPCION INGRESADA NO EXISTE. \n");
-       
+
      }
 
+     printf("Presione 's' si desea realizar otra operacion\n");
+     scanf("%s", &resp);
 
-   } else if(respuesta == 2) {
-
-     printf("HA ENTRADO AL MENU CAJERO\n");
-     printf("SELECCIONE LA OPCION: \n\n");
-     printf("OPCION 1: REGISTRAR UNA NUEVA COMPRA\n");
-     printf("OPCION 2: SALIR\n");
+   } while(resp == 's' || resp == 'S');
 
 
-   } else if(respuesta == 3) {
-     printf("GRACIAR POR USAR ESTE PROGRAMA\n");
-     exit(EXIT_SUCCESS);
-
-   } else {
-
-     printf("LA OPCION INGRESADA NO EXISTE. \n");
-     printf("LAS OPCIONES SON: \n\n");
-     printf("OPCION 1: ADMINISTRADOR\n");
-     printf("OPCION 2: CAJERO\n");
-     printf("OPCION 3: SALIR\n");
-   }
 
    return 0;
 }
