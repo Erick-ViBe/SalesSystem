@@ -1,4 +1,4 @@
-contigua.o: supermercado.c
+supermercado.o: supermercado.c
 	gcc supermercado.c -c -Wall
 main.o: main.c
  	gcc main.c -c -Wall
