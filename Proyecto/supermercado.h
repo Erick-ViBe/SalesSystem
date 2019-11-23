@@ -29,7 +29,7 @@ struct Arbol {
    int fe;
 };
 
-struct Producto leerProducto(void);
+struct Producto leerProducto();
 struct Cliente leerCliente();
 struct Arbol* insertar(struct Arbol *raizArbol, struct Producto productoInsertar);
 struct Arbol* rotacionDerecha(struct Arbol *raizDesbalanceada);
