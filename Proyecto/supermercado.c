@@ -266,6 +266,43 @@ int obtenerCodigo(char *palabra){
      num *= multiplicador;
  }
 
-
   return num;
+}
+
+void listaInsertar(struct Lista **milista, struct Producto productoAgregado){
+
+  struct Lista *temporal = malloc(sizeof(struct Lista));
+  temporal -> productoComprado = productoAgregado;
+  temporal -> siguiente = *milista;
+
+  if (*milista == NULL) {
+    *milista = temporal;
+	return;
+  } else {
+
+    *milista = temporal;
+  }
+}
+
+struct Ticket finalizarCompra(struct Cliente clienteTicket, struct Arbol *raizArbol){
+
+   struct Ticket nuevo;
+   nuevo->ClienteCompra = clienteTicket;
+
+   struct Lista *compraTicket = NULL;
+
+   float totalCompraTicket;
+   int codigoCompraTicket;
+   char comprarProducto;
+
+   do {
+
+      printf("Ingrese el codigo del producto: ");
+      scanf("%d\n", &codigoCompraTicket);
+      listaInsertar(&compraTicket, buscar(raizArbol, codigoCompraTicket));
+
+      printf("Si desea agregar otro producto pulse 'S'\n", );
+      scanf("%c", comprarProducto);
+   } while(comprarProducto=='S' || comprarProducto=='s');
+
 }
