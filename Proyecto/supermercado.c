@@ -1,7 +1,7 @@
 #include "supermercado.h"
 
 struct Producto
-leerProducto(void){
+leerProducto(){
 
    struct Producto nuevo;
    float precioProducto;
