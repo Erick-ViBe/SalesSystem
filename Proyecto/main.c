@@ -2,7 +2,7 @@
 
 int main(void) {
 
-   // struct Arbol *raiz = NULL;
+   struct Arbol *raiz = NULL;
    //
    // raiz = insertar(raiz, leerProducto());
    // raiz = insertar(raiz, leerProducto());
@@ -19,6 +19,8 @@ int main(void) {
    // printf("Nombre: %s\n", raiz->hijoIzquierdo->productoAlmacenado.nombre);
    // printf("Codigo: %d\n", raiz->hijoIzquierdo->productoAlmacenado.codigo);
    // printf("Precio: %.2f\n", raiz->hijoIzquierdo->productoAlmacenado.precio);
+   //
+   // while (getchar()!=32);
 
    int selector;
    char resp;
