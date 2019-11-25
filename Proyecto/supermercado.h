@@ -49,10 +49,11 @@ struct Arbol* rotacionIzquierda(struct Arbol *raizDesbalanceada);
 int calcularAltura(struct Arbol *raiz);
 int calcularFE(struct Arbol *raiz);
 struct Producto buscar(struct Arbol *raiz, int codigoBuscar);
-int modificar(struct Arbol *raiz, int codigoBuscar);
+int modificarPrecio(struct Arbol *raiz, int codigoBuscar);
 char enteroacaracter(int numero);
 int obtenerCodigo(char *palabra);
 void listaInsertar(struct Lista **milista, struct Producto productoLista);
 struct Ticket finalizarCompra(struct Cliente clienteTicket, struct Arbol *raizArbol);
+void mostrar(struct Arbol *raiz);
 
 #endif

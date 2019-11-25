@@ -38,8 +38,9 @@ int main(void) {
        printf("HA ENTRADO AL MENU ADMINISTRADOR\n\n\t\t");
        printf("SELECCIONE LA OPCION: \n\n\t\t");
        printf("OPCION 1: INGRESAR PRODUCTOS\n\t\t");
-       printf("OPCION 2: MODIFICAR UN PRODUCTO\n\t\t");
-       printf("OPCION 3: VOLVER AL MENU ANTERIOR\n");
+       printf("OPCION 2: MODIFICAR PRECIO DE UN PRODUCTO\n\t\t");
+       printf("OPCION 3: MOSTRAR PRODUCTOS INGRESADOS\n\t\t");
+       printf("OPCION 4: VOLVER AL MENU ANTERIOR\n");
 
        scanf("%d", &selector);
        system("clear");
@@ -55,9 +56,20 @@ int main(void) {
          printf("Codigo: %d\n", nuevoProducto.codigo);
 
        } else if(selector == 2) {
-         printf("HA SELECCIONADO MODIFICAR UN PRODUCTO\n\t\t");
-         // posiblemente se ignore :vvvv
-       } else if(selector == 3) {
+         printf("HA SELECCIONADO MODIFICAR PRECIO DE UN PRODUCTO\n\t\t");
+
+         int codigoModificarPrecio;
+         int r;
+         printf("Codigo de producto a modificar: ");
+         scanf("%d", &codigoModificarPrecio);
+         r = modificarPrecio(raiz, codigoModificarPrecio);
+
+      } else if(selector == 3) {
+         printf("HA SELECCIONADO MOSTRAR PRODUCTOS INGRESADOS\n\t\t");
+
+         mostrar(raiz);
+
+      } else if(selector == 4) {
          printf("GRACIAR POR USAR ESTE PROGRAMA\n\t\t");
          exit(EXIT_SUCCESS);
 

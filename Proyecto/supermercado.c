@@ -27,7 +27,7 @@ leerCliente(){
    int idTarjeta;
 
    printf("Nombre del Cliente: \n");
-   scanf("%[^\n]", nombreCliente);
+   scanf("%s", nombreCliente);
    printf("ID de la tarjeta\n");
    scanf("%d", &idTarjeta);
 
@@ -199,7 +199,7 @@ buscar(struct Arbol *raiz, int codigoBuscar){
 }
 
 int
-modificar(struct Arbol *raiz, int codigoBuscar){
+modificarPrecio(struct Arbol *raiz, int codigoBuscar){
 
 	if (raiz == NULL) {
 
@@ -208,15 +208,16 @@ modificar(struct Arbol *raiz, int codigoBuscar){
 
 		printf("%f\n", raiz->productoAlmacenado.precio);
       float nuevoPrecio;
-      scanf("Nuevo Precio:%f", &nuevoPrecio);
+      printf("Nuevo Precio: ");
+      scanf("%f", &nuevoPrecio);
       raiz->productoAlmacenado.precio = nuevoPrecio;
       return 1;
 	}	else if (codigoBuscar < raiz->productoAlmacenado.codigo) {
 
-		return modificar(raiz->hijoIzquierdo, codigoBuscar);
+		return modificarPrecio(raiz->hijoIzquierdo, codigoBuscar);
 	} else{
 
-		return modificar(raiz->hijoDerecho, codigoBuscar);
+		return modificarPrecio(raiz->hijoDerecho, codigoBuscar);
 	}
 }
 
@@ -297,12 +298,12 @@ struct Ticket finalizarCompra(struct Cliente clienteTicket, struct Arbol *raizAr
    do {
 
       printf("Ingrese el codigo del producto: ");
-      scanf("%d\n", &codigoCompraTicket);
-      listaInsertar(&compraTicket, buscar(raizArbol, codigoCompraTicket));
+      scanf("%d", &codigoCompraTicket);
       busqueda = buscar(raizArbol, codigoCompraTicket);
+      listaInsertar(&compraTicket, busqueda);
       totalCompraTicket += busqueda.precio;
       printf("Si desea agregar otro producto pulse 'S'\n");
-      scanf("%c", &comprarProducto);
+      scanf("%s", &comprarProducto);
    } while(comprarProducto=='S' || comprarProducto=='s');
 
    nuevo.ClienteCompra = clienteTicket;
@@ -310,4 +311,17 @@ struct Ticket finalizarCompra(struct Cliente clienteTicket, struct Arbol *raizAr
    nuevo.totalCompra = totalCompraTicket;
 
    return nuevo;
+}
+
+void
+mostrar (struct Arbol *raiz)
+{
+  if (raiz == NULL)
+    {
+      return;
+    }
+
+  mostrar (raiz->hijoIzquierdo);
+  printf ("\n%d", raiz->productoAlmacenado.codigo);
+  mostrar (raiz->hijoDerecho);
 }
