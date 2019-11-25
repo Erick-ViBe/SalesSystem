@@ -26,8 +26,10 @@ leerCliente(){
    char nombreCliente[30];
    int idTarjeta;
 
-   scanf("Nombre del Cliente: %[^\n]",nombreCliente);
-   scanf("Id de la tajeta: %d", &idTarjeta);
+   printf("Nombre del Cliente: \n");
+   scanf("%[^\n]", nombreCliente);
+   printf("ID de la tarjeta\n");
+   scanf("%d", &idTarjeta);
 
    strcpy(nuevo.nombre, nombreCliente);
    nuevo.id_tarjeta = idTarjeta;
@@ -305,7 +307,7 @@ struct Ticket finalizarCompra(struct Cliente clienteTicket, struct Arbol *raizAr
 
    nuevo.ClienteCompra = clienteTicket;
    nuevo.listaCompra = *compraTicket;
-   nuevo. totalCompra = totalCompraTicket;
+   nuevo.totalCompra = totalCompraTicket;
 
    return nuevo;
 }
