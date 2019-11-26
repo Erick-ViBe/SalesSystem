@@ -7,9 +7,9 @@ leerProducto(){
    float precioProducto;
    char nombreProducto[25];
 
-   printf("\n\t\tINGRESE EL NOMBRE: \n");
+   printf("\n\tINGRESE EL NOMBRE: ");
    scanf("%s",nombreProducto);
-   printf("\n\t\tINGRESE EL PRECIO: \n");
+   printf("\n\tINGRESE EL PRECIO: ");
    scanf("%f", &precioProducto);
 
    nuevo.precio = precioProducto;
@@ -26,9 +26,9 @@ leerCliente(){
    char nombreCliente[30];
    int idTarjeta;
 
-   printf("\n\t\tNOMBRE DEL CLIENTE: \n");
+   printf("\n\tNOMBRE DEL CLIENTE: ");
    scanf("%s", nombreCliente);
-   printf("\n\t\tNUMERO DE TARJETA\n");
+   printf("\n\tNUMERO DE TARJETA: ");
    scanf("%d", &idTarjeta);
 
    strcpy(nuevo.nombre, nombreCliente);
@@ -206,9 +206,9 @@ modificarPrecio(struct Arbol *raiz, int codigoBuscar){
       return 0;
 	} else if (raiz->productoAlmacenado.codigo == codigoBuscar) {
 
-		printf("%f\n", raiz->productoAlmacenado.precio);
+		printf("\n\tPRECIO ANTIGÜO: %f\n", raiz->productoAlmacenado.precio);
       float nuevoPrecio;
-      printf("\n\t\tNUEVO PRECIO: ");
+      printf("\n\tNUEVO PRECIO: ");
       scanf("%f", &nuevoPrecio);
       raiz->productoAlmacenado.precio = nuevoPrecio;
       return 1;
@@ -297,7 +297,7 @@ struct Ticket finalizarCompra(struct Cliente clienteTicket, struct Arbol *raizAr
 
    do {
 
-      printf("\n\t\tINGRESE EL CODIGO DEL PRODUCTO: ");
+      printf("\n\tINGRESE EL CODIGO DEL PRODUCTO: ");
       scanf("%d", &codigoCompraTicket);
       busqueda = buscar(raizArbol, codigoCompraTicket);
       listaInsertar(&compraTicket, busqueda);
@@ -322,9 +322,9 @@ mostrar (struct Arbol *raiz)
     }
 
   mostrar (raiz->hijoIzquierdo);
-  printf ("\n\t\tNOMBRE: %s", raiz->productoAlmacenado.nombre);
-  printf ("\n\t\tPRECIO: $ %.2f", raiz->productoAlmacenado.precio);
-  printf ("\n\t\tCODIGO: %d\n", raiz->productoAlmacenado.codigo);
+  printf ("\n\tNOMBRE: %s", raiz->productoAlmacenado.nombre);
+  printf ("\n\tPRECIO: $ %.2f", raiz->productoAlmacenado.precio);
+  printf ("\n\tCODIGO: %d\n", raiz->productoAlmacenado.codigo);
   mostrar (raiz->hijoDerecho);
 }
 
@@ -336,7 +336,7 @@ void mostrarhora(void){
   t = time(NULL);
   tm = localtime(&t);
 
-    printf("\t\tOPERACION REALIZADA A LAS: %02d:%02d:%02d HORAS\n\t\t", tm -> tm_hour, tm -> tm_min, tm -> tm_sec );
+    printf("\t\tCOMPRA REALIZADA A LAS: %02d:%02d:%02d\n\t\t", tm -> tm_hour, tm -> tm_min, tm -> tm_sec );
     printf ("DE FECHA: %02d/%02d/%d\n\t\t", tm -> tm_mday, tm -> tm_mon,1900 + tm -> tm_year);
     printf("GRACIAS POR SU COMPRA \n\t\t");
 
