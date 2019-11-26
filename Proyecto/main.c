@@ -59,10 +59,9 @@ int main(void) {
          printf("HA SELECCIONADO MODIFICAR PRECIO DE UN PRODUCTO\n\t\t");
 
          int codigoModificarPrecio;
-         int r;
          printf("Codigo de producto a modificar: ");
          scanf("%d", &codigoModificarPrecio);
-         r = modificarPrecio(raiz, codigoModificarPrecio);
+         modificarPrecio(raiz, codigoModificarPrecio);
 
       } else if(selector == 3) {
          printf("HA SELECCIONADO MOSTRAR PRODUCTOS INGRESADOS\n\t\t");
