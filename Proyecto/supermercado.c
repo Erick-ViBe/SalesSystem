@@ -7,9 +7,9 @@ leerProducto(){
    float precioProducto;
    char nombreProducto[25];
 
-   printf("Nombre del Producto: \n");
+   printf("\n\t\tINGRESE EL NOMBRE: \n");
    scanf("%s",nombreProducto);
-   printf("Precio del Producto: \n");
+   printf("\n\t\tINGRESE EL PRECIO: \n");
    scanf("%f", &precioProducto);
 
    nuevo.precio = precioProducto;
@@ -26,9 +26,9 @@ leerCliente(){
    char nombreCliente[30];
    int idTarjeta;
 
-   printf("Nombre del Cliente: \n");
+   printf("\n\t\tNOMBRE DEL CLIENTE: \n");
    scanf("%s", nombreCliente);
-   printf("ID de la tarjeta\n");
+   printf("\n\t\tNUMERO DE TARJETA\n");
    scanf("%d", &idTarjeta);
 
    strcpy(nuevo.nombre, nombreCliente);
@@ -208,7 +208,7 @@ modificarPrecio(struct Arbol *raiz, int codigoBuscar){
 
 		printf("%f\n", raiz->productoAlmacenado.precio);
       float nuevoPrecio;
-      printf("Nuevo Precio: ");
+      printf("\n\t\tNUEVO PRECIO: ");
       scanf("%f", &nuevoPrecio);
       raiz->productoAlmacenado.precio = nuevoPrecio;
       return 1;
@@ -297,12 +297,12 @@ struct Ticket finalizarCompra(struct Cliente clienteTicket, struct Arbol *raizAr
 
    do {
 
-      printf("Ingrese el codigo del producto: ");
+      printf("\n\t\tINGRESE EL CODIGO DEL PRODUCTO: ");
       scanf("%d", &codigoCompraTicket);
       busqueda = buscar(raizArbol, codigoCompraTicket);
       listaInsertar(&compraTicket, busqueda);
       totalCompraTicket += busqueda.precio;
-      printf("Si desea agregar otro producto pulse 'S'\n");
+      printf("\n\t\tPRESIONE 'S' PARA AGREGAR OTRO PRODUCTO\n");
       scanf("%s", &comprarProducto);
    } while(comprarProducto=='S' || comprarProducto=='s');
 
@@ -322,6 +322,23 @@ mostrar (struct Arbol *raiz)
     }
 
   mostrar (raiz->hijoIzquierdo);
-  printf ("\n%d", raiz->productoAlmacenado.codigo);
+  printf ("\n\t\tNOMBRE: %s", raiz->productoAlmacenado.nombre);
+  printf ("\n\t\tPRECIO: $ %.2f", raiz->productoAlmacenado.precio);
+  printf ("\n\t\tCODIGO: %d\n", raiz->productoAlmacenado.codigo);
   mostrar (raiz->hijoDerecho);
+}
+
+void mostrarhora(void){
+
+  time_t t;
+  struct tm *tm;
+
+  t = time(NULL);
+  tm = localtime(&t);
+
+    printf("\t\tOPERACION REALIZADA A LAS: %02d:%02d:%02d HORAS\n\t\t", tm -> tm_hour, tm -> tm_min, tm -> tm_sec );
+    printf ("DE FECHA: %02d/%02d/%d\n\t\t", tm -> tm_mday, tm -> tm_mon,1900 + tm -> tm_year);
+    printf("GRACIAS POR SU COMPRA \n\t\t");
+
+
 }

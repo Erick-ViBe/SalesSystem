@@ -6,6 +6,7 @@
 #include "ctype.h"
 #include "stdlib.h"
 #include "math.h"
+#include "time.h"
 
 struct Cliente {
 
@@ -55,5 +56,6 @@ int obtenerCodigo(char *palabra);
 void listaInsertar(struct Lista **milista, struct Producto productoLista);
 struct Ticket finalizarCompra(struct Cliente clienteTicket, struct Arbol *raizArbol);
 void mostrar(struct Arbol *raiz);
+void mostrarhora(void);
 
 #endif
