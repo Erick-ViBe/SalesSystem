@@ -15,9 +15,9 @@ Descripción:
 
 Fecha de Entrega:
 
-- No definido
+- 27 de Noviembre de 2019
 
-Estructuras a usar:
+Estructuras de datos utilizadas:
 
 - Lista ligada simple
 - Árbol AVL
