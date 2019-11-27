@@ -34,9 +34,10 @@ int main(void) {
        system("clear");
 
        if(respuesta == 1){
-
          printf("\t\tHA SELECCIONADO INGRESAR UN NUEVO PRODUCTO\n\t");
+
          struct Producto nuevoProducto;
+
          nuevoProducto = leerProducto();
          raiz = insertar(raiz, nuevoProducto);
          printf("\nEL PRODUCTO HA SIDO REGISTRADO\n");
