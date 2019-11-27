@@ -8,6 +8,8 @@ int main(void) {
    char resp;
 
    do {
+
+     menuprincipal:
      system("clear");
      printf("\t\tMENU DE COMPRAS: \n\n\t");
      printf("SELECCIONE LA OPCION: \n\n\t");
@@ -19,17 +21,20 @@ int main(void) {
      system("clear");
 
      if(respuesta == 1){
+
        printf("\t\tHA ENTRADO AL MENU ADMINISTRADOR\n\n\t\t");
        printf("SELECCIONE LA OPCION: \n\n\t");
        printf("OPCION 1: INGRESAR PRODUCTOS\n\t");
        printf("OPCION 2: MODIFICAR PRECIO DE UN PRODUCTO\n\t");
        printf("OPCION 3: MOSTRAR PRODUCTOS INGRESADOS\n\t");
-       printf("OPCION 4: VOLVER AL MENU ANTERIOR\n");
+       printf("OPCION 4: VOLVER AL MENU ANTERIOR\n\t");
+       printf("OPCION 5: SALIR\n\t");
 
        scanf("%d", &respuesta);
        system("clear");
 
        if(respuesta == 1){
+
          printf("\t\tHA SELECCIONADO INGRESAR UN NUEVO PRODUCTO\n\t");
          struct Producto nuevoProducto;
          nuevoProducto = leerProducto();
@@ -40,6 +45,7 @@ int main(void) {
          printf("CODIGO: %d\n", nuevoProducto.codigo);
 
        } else if(respuesta == 2) {
+
          printf("\t\tHA SELECCIONADO MODIFICAR PRECIO DE UN PRODUCTO\n\t");
 
          int codigoModificarPrecio;
@@ -48,15 +54,21 @@ int main(void) {
          modificarPrecio(raiz, codigoModificarPrecio);
 
       } else if(respuesta == 3) {
-         printf("\t\tHA SELECCIONADO MOSTRAR PRODUCTOS INGRESADOS\n\t");
 
+         printf("\t\tHA SELECCIONADO MOSTRAR PRODUCTOS INGRESADOS\n\t");
          mostrar(raiz);
 
       } else if(respuesta == 4) {
 
-        printf("\n\t\tSALIENDO DE LA OPCION...\n");
+        goto menuprincipal;
 
-       } else {
+      } else if(respuesta == 5){
+
+        system("clear");
+        printf("\t\tGRACIAR POR USAR ESTE PROGRAMA\n\t\t");
+        exit(EXIT_SUCCESS);
+
+      } else {
 
          printf("\t\tLA OPCION INGRESADA NO EXISTE. \n\t");
 
@@ -64,35 +76,48 @@ int main(void) {
 
 
      } else if(respuesta == 2) {
+
        printf("\t\tHA ENTRADO AL MENU CAJERO\n\n\t");
        printf("SELECCIONE LA OPCION: \n\n\t");
        printf("OPCION 1: REGISTRAR UNA NUEVA COMPRA\n\t");
        printf("OPCION 2: VOLVER AL MENU ANTERIOR\n\t");
+       printf("OPCION 3: SALIR\n\t");
 
        scanf("%d", &respuesta);
        system("clear");
 
        if(respuesta == 1){
+
          printf("\t\tHA SELECCIONADO REGISTRAR UNA NUEVA COMPRA\n\t\t");
          struct Ticket nuevoTicket;
          nuevoTicket = finalizarCompra(leerCliente(), raiz);
          printf("\t\tTOTAL A PAGAR: %.2f\n", nuevoTicket.totalCompra);
          mostrarhora();
+
        } else if(respuesta == 2) {
 
-         printf("\n\t\tSALIENDO DE LA OPCION...\n");
+         goto menuprincipal;
+
+       } else if(respuesta == 3){
+
+         system("clear");
+         printf("\t\tGRACIAR POR USAR ESTE PROGRAMA\n\t\t");
+         exit(EXIT_SUCCESS);
 
        } else {
+
          printf("\t\tLA OPCION INGRESADA NO EXISTE. \n\t\t");
 
        }
 
      } else if(respuesta == 3) {
+
        system("clear");
        printf("\t\tGRACIAR POR USAR ESTE PROGRAMA\n\t\t");
        exit(EXIT_SUCCESS);
 
      } else {
+
        printf("\t\tLA OPCION INGRESADA NO EXISTE. \n\t\t");
 
      }
@@ -101,8 +126,6 @@ int main(void) {
      scanf("%s", &resp);
 
    } while(resp == 's' || resp == 'S');
-
-
 
    return 0;
 }
