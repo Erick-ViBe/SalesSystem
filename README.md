@@ -1,6 +1,9 @@
 # ProyectoEstructuras
 
 Grupo: 1CV10
+Maestro: Saucedo Delgado Rafael Norman
+
+Integrantes:
 
 - Castañeda Martínez Erick
 - Vicencio Benítez Sergio Erick
