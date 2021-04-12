@@ -10,7 +10,7 @@ Console application that simulates a sales system, receiving product names and a
 * [Contact](#contact)
 
 <p align='center'>
-  <img src="https://miro.medium.com/max/4000/1*8ygFKYb0Yo6Hc-vnScGA9A.png" width="500" >
+  <img src="http://xpert.pe/wp-content/uploads/2016/05/MC9000Hand_Boxes1.jpg" width="500" >
 </p>
 
 ## Technologies
@@ -19,6 +19,7 @@ Console application that simulates a sales system, receiving product names and a
 ## Requirements
 * Git
 * C
+* make
 
 ## Setup
 1. Clone and enter the repository:\
@@ -26,7 +27,8 @@ Console application that simulates a sales system, receiving product names and a
 `cd SalesSystem`
 
 ## Run Project
-`python3 manage.py runserver`
+`make run`
+> To clean trash files `make clean`
 
 ## Contact
 Created by [@ErickViBe](https://erickvibe.xyz/) - feel free to contact me!
